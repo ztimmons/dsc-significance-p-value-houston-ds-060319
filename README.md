@@ -1,19 +1,23 @@
 
-# Interpreting Model Significance and p-values 
+# Interpreting Significance and P-values 
+
+## Introduction
 
 In this lesson, we shall build on some of the ideas mentioned during significance testing with z-scores. Such an approach can help us associate a confidence level to our model's output which could be very important during decision making. 
 
-### Objectives:
+## Objectives
+
+You will be able to:
 
 * Interpret the p-value and regression coefficients
 * Describe model suitability in terms of obtained significance results
 
 
-### Introduction 
+## Let's get started
 
 We can apply the the ideas of hypothesis testing in a regression context as well as statistical inference. The general approach of hypothesis testing remains the same i.e. We develop a set of hypotheses including null hypothesis and alternative hypothesis. The way we conduct these tests is that we try to reject the null hypothesis with an associated alpha level as a threshold for calling our results significant , or otherwise. We set some statistic according to the nature of underlying data and analytical question and check the significance of our results. 
 
-### Hypothesis Testing in Regression 
+## Hypothesis Testing in Regression 
 
 During regression, we try to measure the model parameters (coefficients ) so our null and alternative hypotheses must also get set up in those terms. Think about the simple regression experiment that we conducted on the advertising dataset. For a simple dataset like this, we can set up our hypotheses as follows:
 
@@ -78,7 +82,9 @@ Again, using 0.05 as the cutoff is just a convention.
 In this case, the p-value for TV is far less than 0.05, and so we believe that there is a relationship between TV ads and Sales. With alpha set to 0.05, we can claim to have 95% confidence on the outcome.  
 Try running above and check for p values for `radio` and see how would interpret the outcome. 
 
-You are encouraged to visit following links to see more examples and explanations around hypothesis testing in regression 
+## Additional Resources
+
+You are encouraged to visit following links to see more examples and explanations around:hypothesis testing in regression 
 
 [Hypothesis Test for Regression Slope](https://stattrek.com/regression/slope-test.aspx)
 
