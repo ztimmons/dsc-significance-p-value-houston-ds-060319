@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lesson, you'll learn more about some of the ideas mentioned in earlier lessons around interpreting significance of results. You'll learn that associating a confidence level to our model's output is be very important during decision making, and an essential part of data science.
+In this lesson, you'll learn more about some of the ideas mentioned in earlier lessons around interpreting the significance of results. You'll learn that associating a confidence level to our model's output is be very important during decision making, and an essential part of data science.
 
 ## Objectives
 
@@ -16,15 +16,15 @@ You will be able to:
 The ideas of hypothesis testing can be applied to regression, as well as statistical inference. For now, You'll learn about how it works in regression, and we'll spend time on formal hypothesis testing in a variety of contexts later on.
 
 When performing hypothesis tests, a set of hypotheses are developed including a so-called **null hypothesis** and an **alternative hypothesis**. 
-In regression, you will generally try to reject the null hypothesis, because that means that there is some relationship between the dependent and independent variable and your model at hand makes sense. Rejecting or not rejecting a null hypothesis always goes hand in hand with a so-called **confidence level**, often defined by the greek letter alpha, $\alpha$.
+In regression, you will generally try to reject the null hypothesis, because that means that there is some relationship between the dependent and independent variable and your model at hand makes sense. Rejecting or not rejecting a null hypothesis always goes hand in hand with a so-called **confidence level**, often defined by the Greek letter alpha, $\alpha$.
 
 ## Hypothesis Testing in Regression 
 
-During regression, you try to measure the model parameters (coefficients). The null and alternative hypotheses are also get set up in those terms. Think about the simple regression model you created using the advertising dataset. For a simple dataset like this, you can set up the hypotheses as follows:
+During regression, you try to measure the model parameters (coefficients). The null and alternative hypotheses are also set up in those terms. Think about the simple regression model you created using the advertising dataset. For a simple dataset like this, you can set up the hypotheses as follows:
 
-> **Null Hypothesis ($H_0$)**: There is no relationship between amount spent on TV advertisement and sales figures
+> **Null Hypothesis ($H_0$)**: There is no relationship between the amount spent on TV advertisement and sales figures
 
-> **Alternative Hypothesis ($H_a$):** There is "some" relation between amount spent on TV advertisement and sales figures
+> **Alternative Hypothesis ($H_a$):** There is "some" relation between the amount spent on TV advertisement and sales figures
 
 If we reject the null hypothesis, it means that we believe that there is some sort of relationship between TV advertisement and sales.
 If we fail to reject the null hypothesis, it means that we believe that  there is no _significant_ relationship between TV advertisement and sales, and that our slope parameter $m$ in $y= mx+c$ is not _significantly_ different from zero. 
@@ -41,7 +41,7 @@ Applied to a regression model, p-values associated with coefficients estimates i
 
 > The parameter is statistically significant at $\alpha$ level 0.05. 
 
-Just like for statistical significance, rejecting the null-hypothesis at an alpha level of 0.05 is the equivalent for having a 95% confidence interval around the coefficient that does not include zero. In short
+Just like for statistical significance, rejecting the null hypothesis at an alpha level of 0.05 is the equivalent for having a 95% confidence interval around the coefficient that does not include zero. In short
 
 > The p-value represents the probability that the coefficient is actually zero. 
 
@@ -78,7 +78,7 @@ model.pvalues
 
 
 
-You'll notice that you also get a p-value for the intercept. Except if the intercept is actually 0, you should get a pretty low p-value here anytime. The tiny p-value for TV indicates that our coefficient for TV is definitely significant, and we can reject the null-hypothesis. Next, there are two final things from the entire model summary we'd like to highlight:
+You'll notice that you also get a p-value for the intercept. Except if the intercept is actually 0, you should get a pretty low p-value here anytime. The tiny p-value for TV indicates that our coefficient for TV is definitely significant, and we can reject the null hypothesis. Next, there are two final things from the entire model summary we'd like to highlight:
 
 
 ```python
@@ -100,10 +100,10 @@ model.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   312.1</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 08 Mar 2019</td> <th>  Prob (F-statistic):</th> <td>1.47e-42</td>
+  <th>Date:</th>             <td>Fri, 22 Mar 2019</td> <th>  Prob (F-statistic):</th> <td>1.47e-42</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>15:13:22</td>     <th>  Log-Likelihood:    </th> <td> -519.05</td>
+  <th>Time:</th>                 <td>14:29:54</td>     <th>  Log-Likelihood:    </th> <td> -519.05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   200</td>      <th>  AIC:               </th> <td>   1042.</td>
@@ -156,7 +156,7 @@ Try running above and check for p-values for `radio` and see how would interpret
 
 ## Additional Resources
 
-We encourage you to visit following links to see more examples and explanations around hypothesis testing and p values in regression!
+We encourage you to visit the following links to see more examples and explanations around hypothesis testing and p values in regression!
 
 [Hypothesis Test for Regression Slope](https://stattrek.com/regression/slope-test.aspx)
 
@@ -164,4 +164,4 @@ We encourage you to visit following links to see more examples and explanations 
 
 ## Summary 
 
-In this lesson, you learned how to apply the ideas of hypothesis testing in regression analysis to associate significance and confidence level with your model. You used this with your previous regression model to check the association. In the next lab, you'll combine all the ideas around simple linear regression with OLS on a slightly more complex dataset with a more features. 
+In this lesson, you learned how to apply the ideas of hypothesis testing in regression analysis to associate significance and confidence level with your model. You used this with your previous regression model to check the association. In the next lab, you'll combine all the ideas around simple linear regression with OLS on a slightly more complex dataset with more features. 
